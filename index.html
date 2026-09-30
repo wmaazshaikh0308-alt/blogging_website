@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBlog - A Simple Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">My<span>Blog</span></a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#posts">Posts</a>
+        <a href="#about">About</a>
+        <button id="themeBtn">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <div>
+        <p class="tag">WELCOME TO MY BLOG</p>
+        <h1>Ideas, stories & things I'm learning.</h1>
+        <p class="hero-text">
+          A simple place where I share what I learn, build, and discover.
+        </p>
+        <a href="#posts" class="primary-btn">Read my posts →</a>
+      </div>
+    </section>
+
+    <section id="posts" class="posts-section">
+      <div class="section-heading">
+        <div>
+          <p class="tag">LATEST POSTS</p>
+          <h2>What I'm writing about</h2>
+        </div>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search posts..."
+        >
+      </div>
+
+      <div class="categories">
+        <button class="category active" data-category="all">All</button>
+        <button class="category" data-category="coding">Coding</button>
+        <button class="category" data-category="college">College</button>
+        <button class="category" data-category="life">Life</button>
+      </div>
+
+      <div id="postContainer" class="post-grid">
+
+        <article class="post-card" data-category="coding">
+          <div class="post-image">{"</>"}</div>
+          <div class="post-content">
+            <span class="category-label">Coding</span>
+            <h3>My First Week of Learning C</h3>
+            <p>
+              What I learned about variables, loops, functions and pointers
+              as a beginner.
+            </p>
+            <div class="post-footer">
+              <span>Sep 28, 2026</span>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="college">
+          <div class="post-image college">📚</div>
+          <div class="post-content">
+            <span class="category-label">College</span>
+            <h3>How I Survived a Busy Semester</h3>
+            <p>
+              A few simple lessons that helped me manage classes,
+              assignments and exam preparation.
+            </p>
+            <div class="post-footer">
+              <span>Sep 20, 2026</span>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="life">
+          <div class="post-image life">☕</div>
+          <div class="post-content">
+            <span class="category-label">Life</span>
+            <h3>Why Starting Small Actually Works</h3>
+            <p>
+              You don't need a perfect plan. Sometimes the best way forward
+              is simply to start.
+            </p>
+            <div class="post-footer">
+              <span>Sep 12, 2026</span>
+              <a href="#">Read →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="noResults" class="no-results">No posts found.</p>
+    </section>
+
+    <section id="about" class="about">
+      <p class="tag">ABOUT ME</p>
+      <h2>Hey, I'm a beginner developer.</h2>
+      <p>
+        I'm learning programming one concept at a time and using this blog
+        to document the journey.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 MyBlog · Built while learning web development.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

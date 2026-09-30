@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f5;
+  color: #171717;
+  line-height: 1.6;
+}
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #171717;
+}
+
+.logo span {
+  color: #6c63ff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a:hover {
+  color: #6c63ff;
+}
+
+#themeBtn {
+  border: none;
+  background: #eeeeee;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: auto;
+  padding: 100px 25px;
+}
+
+.tag {
+  color: #6c63ff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  max-width: 750px;
+  font-size: 58px;
+  line-height: 1.05;
+  margin: 15px 0;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: #171717;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.primary-btn:hover {
+  background: #6c63ff;
+}
+
+.posts-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+}
+
+.section-heading h2,
+.about h2 {
+  font-size: 36px;
+  margin-top: 8px;
+}
+
+#searchInput {
+  width: 230px;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.categories {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.category {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.category.active,
+.category:hover {
+  background: #6c63ff;
+  color: white;
+  border-color: #6c63ff;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.post-card {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-image {
+  height: 180px;
+  background: #171717;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: monospace;
+}
+
+.post-image.college {
+  background: #6c63ff;
+}
+
+.post-image.life {
+  background: #d97706;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.category-label {
+  font-size: 12px;
+  color: #6c63ff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.post-content h3 {
+  margin: 8px 0;
+  font-size: 21px;
+}
+
+.post-content p {
+  color: #666;
+  font-size: 14px;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+}
+
+.post-footer a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.no-results {
+  display: none;
+  margin-top: 30px;
+  color: #777;
+}
+
+.about {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 25px;
+  border-top: 1px solid #ddd;
+}
+
+.about p:last-child {
+  max-width: 600px;
+  color: #666;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #171717;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* Dark mode */
+body.dark {
+  background: #111111;
+  color: #f5f5f5;
+}
+
+body.dark header,
+body.dark .post-card,
+body.dark .category,
+body.dark #searchInput {
+  background: #1c1c1c;
+  color: #f5f5f5;
+  border-color: #333;
+}
+
+body.dark .logo,
+body.dark .nav-links a {
+  color: #f5f5f5;
+}
+
+body.dark .hero-text,
+body.dark .post-content p,
+body.dark .about p:last-child {
+  color: #aaa;
+}
+
+body.dark #themeBtn {
+  background: #333;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+}
